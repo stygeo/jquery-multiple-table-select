@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Multi select sample</title>
+		 <meta charset="utf-8">
+		<style type="text/css">
+			body {
+				font-family: Arial;
+			}
+			
+			table.multi-select tr.selected {
+				background: green;
+			}
+			
+			.multi-select td[unselectable="on"] {
+			  user-select: none;
+			  -moz-user-select: none;
+			  -khtml-user-select: none;
+			}
+		</style>
+		
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+		  google.load("jquery", "1.4.4");
+
+		  google.setOnLoadCallback(function() {
+				$("table.multi-select tr").multiSelect();
+		  });
+		</script>
+		<script type="text/javascript" src="../js/multi-select.js"></script>
+	</head>
+	<body>
+		<div>Try using <code>shift</code> click for column select and <code>ctrl (⌘ CMD)</code> for individual picking.</div>
+		<strong>Table w/o checkboxes</strong>
+		<table class="multi-select">
+			<tr><td>Select 1</td></tr>
+			<tr><td>Select 2</td></tr>
+			<tr><td>Select 3</td></tr>
+			<tr><td>Select 4</td></tr>
+			<tr><td>Select 5</td></tr>
+			<tr><td>Select 6</td></tr>
+			<tr><td>Select 7</td></tr>
+			<tr><td>Select 8</td></tr>
+			<tr><td>Select 9</td></tr>
+		</table>
+		
+		<strong>Table w/ checkboxes</strong>
+		<table class="multi-select">
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>Select 1</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>Select 2</td></tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>Select 3</td></tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>Select 4</td></tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>Select 5</td></tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>Select 6</td></tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>Select 7</td></tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>Select 8</td></tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>Select 9</td></tr>
+		</table>
+	</body>
+</html>
